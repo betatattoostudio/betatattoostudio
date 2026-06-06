@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0a0a0a;
+  --bg-2: #111111;
+  --card: #1a1a1a;
+  --fg: #f5f5f0;
+  --muted: #888888;
+  --muted-2: #555555;
+  --border: rgba(255, 255, 255, 0.08);
+  --tape: rgba(210, 205, 195, 0.7);
+
+  --text-hero: clamp(2.75rem, 8vw, 7rem);
+  --text-section: clamp(2rem, 5vw, 4rem);
+  --text-xl: clamp(1.15rem, 2vw, 1.5rem);
+
+  --section-py: clamp(5rem, 10vw, 10rem);
+  --container-max: 1240px;
+  --container-px: clamp(1.25rem, 5vw, 4rem);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-card: var(--card);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Display font helper */
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+  font-feature-settings: "ss01", "ss02";
+}
+.font-mono-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+/* Polaroid */
+.polaroid {
+  position: relative;
+  background: #e8dfc8;
+  padding: 12px 12px 52px;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.55),
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  will-change: transform;
+}
+.polaroid::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 72px;
+  height: 22px;
+  background: rgba(220, 215, 195, 0.82);
+  transform: translateX(-50%) rotate(-2deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0.88;
+  border-radius: 1px;
+}
+/* grain texture on image area */
+.polaroid-img-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23g)' opacity='0.18'/></svg>");
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  border-radius: inherit;
+}
+
+.sticky-note {
+  position: absolute;
+  right: -18px;
+  bottom: 36px;
+  padding: 10px 12px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.7rem;
+  color: #1a1a1a;
+  line-height: 1.2;
+  max-width: 110px;
+  transform: rotate(6deg);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+.sticky-note.yellow { background: #ffe66b; }
+.sticky-note.pink   { background: #ffb3c7; }
+.sticky-note.green  { background: #b8ff9b; }
+
+/* Mobile hero marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Float keyframes for hero images */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.float-slow { animation: float-y 7s ease-in-out infinite; }
+.float-med  { animation: float-y 5s ease-in-out infinite; }
+.float-fast { animation: float-y 4s ease-in-out infinite; }
+
+/* Outline text for big "Hakan" wordmark */
+.text-outline {
+  -webkit-text-stroke: 1px rgba(245, 245, 240, 0.55);
+  color: transparent;
+}
+
+/* Buttons */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.btn-pill:hover { transform: translateY(-1px); }
+.btn-light { background: var(--fg); color: var(--bg); }
+.btn-light:hover { background: #ffffff; }
+.btn-outline {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.btn-outline:hover { background: rgba(255, 255, 255, 0.06); }
+.btn-hero {
+  padding: 0.85rem 1.6rem;
+  font-size: 0.88rem;
+  line-height: 1;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.36);
 }
