@@ -9,35 +9,35 @@ import SectionCTA from './SectionCTA';
 const artists = [
   {
     name: 'Hakan',
-    role: 'Realism & Black/Grey',
+    role: 'Cover-Up & Black/Grey',
     portrait: teamImages[0].src,
     workPhoto: heroImages[0].src,
     bullets: [
-      '10+ yıl deneyim, yüzlerce ışıktan geçmiş çalışma. Her tasarım sıfırdan, sana özel.',
-      'Realism ve Black & Grey alanlarında uzman. Detay, doku ve gölgelendirme önceliğimiz.',
-      'Randevular sadece Instagram DM üzerinden alınmaktadır. Net brief, net sonuç.',
+      'Cover-up projelerinde eski izi yeni tasarıma yediren güçlü black and grey kompozisyonlar.',
+      'Deniz feneri gibi mimari formlar, dalga dokuları ve yoğun gölgede temiz kontrast.',
+      'Mevcut dövmenin formu analiz edilir; kapama tasarımı ona göre sıfırdan planlanır.',
     ],
   },
   {
     name: 'Merve',
-    role: 'Fine Line & Minimalist',
+    role: 'Color Realism & Fine Line',
     portrait: teamImages[1].src,
     workPhoto: realismGallery[4].src,
     bullets: [
-      'İnce çizgi ve minimalist tarzda uzmanlaşmış. Her detay titizlikle işleniyor.',
-      'Geometrik ve botanik desenler ana uzmanlık alanı. Zarafet her işin temelinde.',
-      'Küçük ama anlamlı dövmelerde en iyi sonucu elde etmek için burada.',
+      'Color realism ve fine line detaylarını aynı tasarımda dengeli şekilde birleştirir.',
+      'Karakter ve portre işlerinde yumuşak ton geçişleri, net yüz detayları ve canlı renk vurguları.',
+      'Her çalışma cilt tonu, bölge formu ve tasarımın odak noktası düşünülerek planlanır.',
     ],
   },
   {
     name: 'Erdinç',
-    role: 'Color Realism & Cover-Up',
+    role: 'Fine Line & Black/White',
     portrait: teamImages[2].src,
     workPhoto: lineworkGallery[2].src,
     bullets: [
-      'Renk gerçekçiliği ve kapama dövmelerinde uzman. Zorlu projelere özel çözümler.',
-      'Canlı renk paletleriyle hayata geçirilen portreler ve doğa tasarımları.',
-      'Her kapama çalışması, yeni bir başlangıç. Geçmişi gizle, geleceği taşı.',
+      'Fine line ve black/white işlerde temiz çizgi, boşluk dengesi ve net kompozisyon.',
+      'Balon, geometrik akış ve nokta detayları gibi hafif ama karakterli tasarımlarda güçlü.',
+      'Ön kol gibi hareketli bölgelerde tasarım, vücudun doğal formuna göre yerleştirilir.',
     ],
   },
 ];
