@@ -3,9 +3,18 @@ const ASSET_VERSION = '20260606-studio-interior';
 const asset = (path: string) => `/assets/website/${path}?v=${ASSET_VERSION}`;
 
 export const teamImages = [
-  { src: asset('team/hakan.webp'), alt: 'Hakan — Realism ve Black & Grey dövme sanatçısı, Beta Tattoo Studio Maltepe' },
-  { src: asset('team/merve.webp'), alt: 'Merve — Fine Line ve Minimalist dövme sanatçısı, Beta Tattoo Studio Maltepe' },
-  { src: asset('team/erdinc.webp'), alt: 'Erdinç — Color Realism ve Cover-Up uzmanı, Beta Tattoo Studio Maltepe' },
+  {
+    src: asset('team/hakan.webp'),
+    alt: 'Hakan — Realism ve Black & Grey dövme sanatçısı, Beta Tattoo Studio Maltepe',
+  },
+  {
+    src: asset('team/merve.webp'),
+    alt: 'Merve — Fine Line ve Minimalist dövme sanatçısı, Beta Tattoo Studio Maltepe',
+  },
+  {
+    src: asset('team/erdinc.webp'),
+    alt: 'Erdinç — Color Realism ve Cover-Up uzmanı, Beta Tattoo Studio Maltepe',
+  },
 ];
 
 export const studioInteriorImages = [
@@ -59,7 +68,7 @@ export const studioInteriorImages = [
   },
 ];
 
-const realismGallery = [
+export const realismGallery = [
   {
     src: asset('tattoos/realistic/img-6023.webp'),
     alt: 'Realism portre dövme — Beta Tattoo Studio Maltepe',
@@ -98,7 +107,7 @@ const realismGallery = [
   },
 ];
 
-const colorGallery = [
+export const colorGallery = [
   {
     src: asset('tattoos/color/img-7625.webp'),
     alt: 'Color realism dövme — canlı renkli çalışma, Beta Tattoo Studio',
@@ -145,7 +154,7 @@ const colorGallery = [
   },
 ];
 
-const minimalGallery = [
+export const minimalGallery = [
   {
     src: asset('tattoos/minimal/img-8298.webp'),
     alt: 'Minimalist ince çizgi dövme — Beta Tattoo Studio Maltepe',
@@ -172,7 +181,7 @@ const minimalGallery = [
   },
 ];
 
-const lineworkGallery = [
+export const lineworkGallery = [
   {
     src: asset('tattoos/linework/img-8516.webp'),
     alt: 'Linework geometrik dövme — Beta Tattoo Studio Maltepe',
@@ -203,7 +212,7 @@ const lineworkGallery = [
   },
 ];
 
-const coverUpGallery = [
+export const coverUpGallery = [
   {
     src: asset('tattoos/cover-up/img-8925.webp'),
     alt: 'Cover up dövme — eski dövme kapatma, Beta Tattoo Studio Maltepe',

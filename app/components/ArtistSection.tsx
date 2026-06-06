@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import { heroImages, teamImages } from '../lib/images';
+import { heroImages, teamImages, lineworkGallery, realismGallery } from '../lib/images';
 import SectionCTA from './SectionCTA';
 
 const artists = [
@@ -22,7 +22,7 @@ const artists = [
     name: 'Merve',
     role: 'Fine Line & Minimalist',
     portrait: teamImages[1].src,
-    workPhoto: heroImages[1].src,
+    workPhoto: realismGallery[4].src,
     bullets: [
       'İnce çizgi ve minimalist tarzda uzmanlaşmış. Her detay titizlikle işleniyor.',
       'Geometrik ve botanik desenler ana uzmanlık alanı. Zarafet her işin temelinde.',
@@ -33,7 +33,7 @@ const artists = [
     name: 'Erdinç',
     role: 'Color Realism & Cover-Up',
     portrait: teamImages[2].src,
-    workPhoto: heroImages[2].src,
+    workPhoto: lineworkGallery[2].src,
     bullets: [
       'Renk gerçekçiliği ve kapama dövmelerinde uzman. Zorlu projelere özel çözümler.',
       'Canlı renk paletleriyle hayata geçirilen portreler ve doğa tasarımları.',

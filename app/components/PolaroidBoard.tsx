@@ -33,23 +33,7 @@ const positions: [string, string, number][] = [
   ['78%', '73%', 5],
 ];
 
-// Mobile 2-col grid positions: [left%, top%, rotate]
-const mobilePositions: [string, string, number][] = [
-  ['2%', '2%', -7],
-  ['52%', '5%', 5],
-  ['2%', '19%', -3],
-  ['52%', '22%', 6],
-  ['2%', '37%', -5],
-  ['52%', '40%', 4],
-  ['2%', '55%', -8],
-  ['52%', '58%', 3],
-  ['27%', '71%', -2],
-  ['2%', '80%', 6],
-  ['52%', '82%', -4],
-  ['2%', '91%', -3],
-  ['52%', '93%', 5],
-  ['27%', '97%', -2],
-];
+const mobileRotations = [-7, 5, -3, 6, -5, 4, -8, 3, -2, 6, -4, -3];
 
 type PolaroidImage = {
   src: string;
@@ -180,20 +164,16 @@ export default function PolaroidBoard() {
               </h2>
             </div>
 
-            <div
-              className="relative"
-              style={{ height: 'clamp(1900px, 420vw, 2400px)' }}
-            >
+            <div className="grid grid-cols-2 items-start gap-x-3 gap-y-6 pb-2">
               {boardImages.map((p, i) => {
-                const [left, top, rotate] = getPosition(mobilePositions, i);
+                const rotate = mobileRotations[i % mobileRotations.length];
+
                 return (
                   <div
                     key={i}
-                    className="polaroid-card absolute"
+                    className="polaroid-card w-full"
                     style={{
-                      left,
-                      top,
-                      width: '44%',
+                      marginTop: i % 2 === 1 ? 28 : 0,
                       zIndex: selectedIndex === i ? 0 : 10,
                       opacity: selectedIndex === i ? 0 : 1,
                       pointerEvents: selectedIndex === i ? 'none' : 'auto',
@@ -214,7 +194,7 @@ export default function PolaroidBoard() {
             </div>
           </div>
 
-          <SectionCTA className="relative z-30 mt-6 md:mt-8" />
+          <SectionCTA className="relative z-30 mt-12 md:mt-8" />
         </div>
       </section>
 
