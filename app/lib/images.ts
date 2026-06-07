@@ -27,20 +27,8 @@ export const studioInteriorImages = [
     alt: 'Beta Tattoo Studio stüdyo iç görünüm — steril dövme ortamı',
   },
   {
-    src: asset('studio/interior/img-3555.webp'),
-    alt: 'Beta Tattoo Studio seans alanı — Ritim İstanbul, Maltepe',
-  },
-  {
-    src: asset('studio/interior/img-3556.webp'),
-    alt: 'Beta Tattoo Studio ekipman ve çalışma masası',
-  },
-  {
     src: asset('studio/interior/img-3557.webp'),
     alt: 'Beta Tattoo Studio stüdyo atmosferi — Maltepe dövme stüdyosu',
-  },
-  {
-    src: asset('studio/interior/img-3558.webp'),
-    alt: 'Beta Tattoo Studio resepsiyon ve bekleme alanı',
   },
   {
     src: asset('studio/interior/IMG-9272.JPG'),
@@ -55,16 +43,16 @@ export const studioInteriorImages = [
     alt: 'Beta Tattoo Studio iç mekan detay — profesyonel dövme stüdyosu',
   },
   {
+    src: asset('studio/interior/IMG_9291.JPG'),
+    alt: 'Beta Tattoo Studio seans alanı — Ritim İstanbul, Maltepe',
+  },
+  {
     src: asset('studio/interior/IMG_9294.JPG'),
     alt: 'Beta Tattoo Studio çalışma ortamı — hijyenik ve steril alan',
   },
   {
     src: asset('studio/interior/IMG_9298.JPG'),
     alt: 'Beta Tattoo Studio stüdyo detayları — Maltepe, İstanbul',
-  },
-  {
-    src: asset('studio/interior/IMG_9378.PNG'),
-    alt: 'Beta Tattoo Studio genel görünüm — Zuhal Cad. Maltepe',
   },
 ];
 
