@@ -19,20 +19,8 @@ export const teamImages = [
 
 export const studioInteriorImages = [
   {
-    src: asset('studio/interior/img-3551.webp'),
-    alt: 'Beta Tattoo Studio çalışma alanı — Maltepe, İstanbul',
-  },
-  {
-    src: asset('studio/interior/img-3553.webp'),
-    alt: 'Beta Tattoo Studio stüdyo iç görünüm — steril dövme ortamı',
-  },
-  {
     src: asset('studio/interior/img-3557.webp'),
     alt: 'Beta Tattoo Studio stüdyo atmosferi — Maltepe dövme stüdyosu',
-  },
-  {
-    src: asset('studio/interior/IMG-9272.JPG'),
-    alt: 'Beta Tattoo Studio dış cephe — Ritim İstanbul A1 Ticari Blok',
   },
   {
     src: asset('studio/interior/IMG_9286.JPG'),
