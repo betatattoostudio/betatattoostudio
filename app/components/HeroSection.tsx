@@ -8,7 +8,7 @@ import { whatsappHref } from '../lib/contact';
 import { MessageCircle, Phone } from 'lucide-react';
 import { stagger, wordReveal } from '../lib/motion';
 
-const title = ['Pişman', 'Olmayacağınız', 'Dövme'];
+const title = ['Tarzını', 'Bizimle', 'Yansıt'];
 
 const desktopCards = [
   {
@@ -103,7 +103,7 @@ export default function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative min-h-screen w-full overflow-hidden flex flex-col md:block md:pb-[clamp(240px,20vw,420px)]"
+      className="relative min-h-screen w-full overflow-hidden flex flex-col md:pb-[clamp(340px,26vw,500px)]"
       style={{
         paddingTop: 'clamp(4.4rem, 6.6vh, 5.6rem)',
       }}
@@ -144,7 +144,7 @@ export default function HeroSection() {
       />
 
       <motion.div
-        className="relative z-20 text-center px-5 max-w-6xl mx-auto flex-1 flex flex-col justify-center md:block md:pt-[clamp(1rem,4vh,3rem)]"
+        className="relative z-20 text-center px-5 max-w-6xl mx-auto flex-1 flex flex-col justify-center"
         variants={stagger}
         initial="hidden"
         animate="visible"
@@ -156,9 +156,9 @@ export default function HeroSection() {
           Beta Tattoo Studio · Maltepe
         </motion.p>
         <h1
-          className="mx-auto max-w-[900px] leading-[0.94] tracking-normal text-center"
+          className="mx-auto max-w-170 leading-[0.98] tracking-tight text-center text-balance"
           style={{
-            fontSize: 'clamp(3.2rem, 6.2vw, 6rem)',
+            fontSize: 'clamp(3rem, 5.6vw, 5.4rem)',
             fontWeight: 700,
           }}
         >
@@ -166,9 +166,10 @@ export default function HeroSection() {
             <motion.span
               key={i}
               variants={wordReveal}
-              className="block md:whitespace-nowrap"
+              className="inline-block"
             >
               {w}
+              {i < title.length - 1 ? ' ' : ''}
             </motion.span>
           ))}
         </h1>
@@ -209,7 +210,7 @@ export default function HeroSection() {
         className="hidden md:flex absolute inset-x-0 z-10 items-center justify-between"
         style={{
           height: 'clamp(260px, 21vw, 430px)',
-          bottom: 'clamp(-3rem, -4vh, -1.5rem)',
+          bottom: 'clamp(2rem, 5vh, 4rem)',
           perspective: '1300px',
           perspectiveOrigin: '50% 52%',
         }}
