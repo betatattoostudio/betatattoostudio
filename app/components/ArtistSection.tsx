@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import { heroImages, teamImages, lineworkGallery, realismGallery } from '../lib/images';
+import { teamImages, lineworkGallery, realismGallery, kiyarashGallery } from '../lib/images';
 import SectionCTA from './SectionCTA';
 
 const artists = [
@@ -11,7 +11,7 @@ const artists = [
     name: 'Hakan',
     role: 'Cover-Up & Black/Grey',
     portrait: teamImages[0].src,
-    workPhoto: heroImages[0].src,
+    workPhoto: realismGallery[kiyarashGallery.length].src,
     bullets: [
       'Cover-up projelerinde eski izi yeni tasarıma yediren güçlü black and grey kompozisyonlar.',
       'Deniz feneri gibi mimari formlar, dalga dokuları ve yoğun gölgede temiz kontrast.',
@@ -19,14 +19,14 @@ const artists = [
     ],
   },
   {
-    name: 'Merve',
-    role: 'Color Realism & Fine Line',
+    name: 'Kiyarash',
+    role: 'Black & Grey Realism',
     portrait: teamImages[1].src,
-    workPhoto: realismGallery[4].src,
+    workPhoto: kiyarashGallery[1].src,
     bullets: [
-      'Color realism ve fine line detaylarını aynı tasarımda dengeli şekilde birleştirir.',
-      'Karakter ve portre işlerinde yumuşak ton geçişleri, net yüz detayları ve canlı renk vurguları.',
-      'Her çalışma cilt tonu, bölge formu ve tasarımın odak noktası düşünülerek planlanır.',
+      'Portre, mitoloji ve karakter işlerinde derin gölge, yumuşak geçiş ve gerçekçi doku.',
+      'Kurt, aslan, melek ve dalgıç gibi detaylı sahneleri tek kompozisyonda akıcı şekilde kurgular.',
+      'Kol, omuz ve bacak gibi büyük alanlarda tasarım vücudun formuna göre planlanır.',
     ],
   },
   {

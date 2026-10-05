@@ -218,9 +218,9 @@ export default function LocalBusinessSchema() {
       },
       {
         '@type': 'Person',
-        name: 'Merve',
-        jobTitle: 'Fine Line & Minimalist Dövme Sanatçısı',
-        description: 'İnce çizgi ve minimalist tarzda uzmanlaşmış dövme sanatçısı.',
+        name: 'Kiyarash',
+        jobTitle: 'Black & Grey Realism Dövme Sanatçısı',
+        description: 'Portre ve karakter odaklı black & grey realism dövmelerde uzman sanatçı.',
         worksFor: {
           '@type': 'TattooParlor',
           name: 'Beta Tattoo Studio',

@@ -85,17 +85,7 @@ const marqueeImgs = [
   heroImages[5],
 ];
 
-const desktopImgs = [
-  heroImages[0],
-  heroImages[1],
-  heroImages[2],
-  heroImages[4],
-  heroImages[5],
-  heroImages[6],
-  heroImages[0],
-  heroImages[1],
-  heroImages[2],
-];
+const desktopImgs = heroImages;
 
 export default function HeroSection() {
   const ref = useRef<HTMLElement>(null);

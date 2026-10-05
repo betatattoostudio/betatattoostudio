@@ -1,4 +1,4 @@
-const ASSET_VERSION = '20260606-studio-interior';
+const ASSET_VERSION = '20261005-kiyarash';
 
 const asset = (path: string) => `/assets/website/${path}?v=${ASSET_VERSION}`;
 
@@ -8,8 +8,8 @@ export const teamImages = [
     alt: 'Hakan — Realism ve Black & Grey dövme sanatçısı, Beta Tattoo Studio Maltepe',
   },
   {
-    src: asset('team/merve.webp'),
-    alt: 'Merve — Fine Line ve Minimalist dövme sanatçısı, Beta Tattoo Studio Maltepe',
+    src: asset('team/kiyarash.webp'),
+    alt: 'Kiyarash — Black & Grey Realism dövme sanatçısı, Beta Tattoo Studio Maltepe',
   },
   {
     src: asset('team/erdinc.webp'),
@@ -44,7 +44,47 @@ export const studioInteriorImages = [
   },
 ];
 
+export const kiyarashGallery = [
+  {
+    src: asset('tattoos/realistic/kiyarash-01.webp'),
+    alt: 'Valkyrie portre black & grey realism dövme — Kiyarash, Beta Tattoo Studio Maltepe',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-02.webp'),
+    alt: 'Melek ve şeytan black & grey realism kol dövmesi — Kiyarash, Beta Tattoo Studio',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-03.webp'),
+    alt: 'Kurt ve kartal realism omuz dövmesi — Kiyarash, Beta Tattoo Studio İstanbul',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-04.webp'),
+    alt: 'Dalgıç ve batık gemi black & grey dövme — Kiyarash, Beta Tattoo Studio Maltepe',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-05.webp'),
+    alt: 'Geyşa ve maske realism bacak dövmesi — Kiyarash, Beta Tattoo Studio',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-06.webp'),
+    alt: 'Kanatlı portre ve güneş realism ön kol dövmesi — Kiyarash, Beta Tattoo Studio',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-07.webp'),
+    alt: 'Aslan ve geometrik realism baldır dövmesi — Kiyarash, Beta Tattoo Studio İstanbul',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-08.webp'),
+    alt: 'Gözü bağlı kadın portre realism dövme — Kiyarash, Beta Tattoo Studio Maltepe',
+  },
+  {
+    src: asset('tattoos/realistic/kiyarash-09.webp'),
+    alt: 'Stadyum ve deniz feneri black & grey ön kol dövmesi — Kiyarash, Beta Tattoo Studio',
+  },
+];
+
 export const realismGallery = [
+  ...kiyarashGallery,
   {
     src: asset('tattoos/realistic/img-6023.webp'),
     alt: 'Realism portre dövme — Beta Tattoo Studio Maltepe',
@@ -137,7 +177,7 @@ export const minimalGallery = [
   },
   {
     src: asset('tattoos/minimal/img-3068.webp'),
-    alt: 'Minimal dövme tasarımı — Merve, Beta Tattoo Studio İstanbul',
+    alt: 'Minimal dövme tasarımı — Beta Tattoo Studio İstanbul',
   },
   {
     src: asset('tattoos/minimal/img-7505.webp'),
@@ -149,7 +189,7 @@ export const minimalGallery = [
   },
   {
     src: asset('tattoos/minimal/img-8383.webp'),
-    alt: 'Minimalist dövme çalışması — Merve, Beta Tattoo Studio',
+    alt: 'Minimalist dövme çalışması — Beta Tattoo Studio',
   },
   {
     src: asset('tattoos/minimal/img-8496.webp'),
@@ -220,15 +260,15 @@ export const coverUpGallery = [
 ];
 
 export const heroImages = [
-  realismGallery[0],
+  kiyarashGallery[2],
   colorGallery[0],
+  kiyarashGallery[1],
   lineworkGallery[0],
-  minimalGallery[0],
-  coverUpGallery[0],
-  realismGallery[1],
+  kiyarashGallery[0],
+  kiyarashGallery[3],
   colorGallery[1],
-  lineworkGallery[1],
-  minimalGallery[1],
+  kiyarashGallery[6],
+  coverUpGallery[0],
 ];
 
 export const artistPortrait = teamImages[0].src;
