@@ -288,8 +288,8 @@ export const styleGalleries: Record<string, { src: string; alt: string }[]> = {
 
 export const INSTAGRAM_URL = 'https://instagram.com/betatattoo.studio';
 export const INSTAGRAM_DM = 'https://ig.me/m/betatattoo.studio';
-export const WHATSAPP_URL = 'https://wa.me/905369410087';
-export const PHONE_NUMBER = '+905369410087';
+export const WHATSAPP_URL = 'https://wa.me/905537343427';
+export const PHONE_NUMBER = '+905537343427';
 export const PHONE_URL = `tel:${PHONE_NUMBER}`;
 export const STUDIO_ADDRESS =
   'Cevizli Mah., Zuhal Cad. No:46/1, Ritim İstanbul Sitesi, A1 Ticari Blok, Ofis No:368, Maltepe / İstanbul';

@@ -112,7 +112,7 @@ export default function LocalBusinessSchema() {
     name: 'Beta Tattoo Dövme ve Piercing Studio',
     alternateName: 'Beta Tattoo Studio',
     url: siteUrl,
-    telephone: '+905369410087',
+    telephone: '+905537343427',
     image: `${siteUrl}/og-image.jpg`,
     description:
       "Maltepe'de realism, color realism, black & grey ve cover-up uzmanı dövme stüdyosu. Her tasarım sıfırdan, sana özel hazırlanır.",
